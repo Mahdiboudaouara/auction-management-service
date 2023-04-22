@@ -8,6 +8,6 @@ db.connect(function(err) {
   console.log("Connected!");
 });
 server.listen(
-    3005 ,
+  process.env.AUCTION_PORT ,
   console.log(`server is running at port http://${process.env.AUCTION_SERVER}`)
 );

@@ -3,7 +3,13 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY ./ ./
-EXPOSE 3002
+# Create public directory inside dist
+RUN mkdir -p dist/public
+
+# Create images directory inside public
+RUN mkdir -p dist/public/images
+
+EXPOSE 3005
 RUN npm run build
 CMD ["node", "dist/index.js"]
 
