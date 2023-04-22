@@ -49,19 +49,19 @@ spec:
         - name: CLIENT
           value: "139-144-162-115.ip.linodeusercontent.com"
         volumeMounts:
-        - name: storage-for-public-folder
+        - name: storage-for-public
           mountPath: /app/dist/public/images
       volumes:
-        - name: storage-for-public-folder
+        - name: storage-for-public
           persistentVolumeClaim:
-            claimName: pvc-public-images
+            claimName: pvc-images
   
 ---
 
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-public-images
+  name: pvc-images
 spec:
   accessModes:
   - ReadWriteOnce
