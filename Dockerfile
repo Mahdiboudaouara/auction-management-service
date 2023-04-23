@@ -9,7 +9,7 @@ RUN mkdir -p dist/public
 # Create images directory inside public
 RUN mkdir -p dist/public/images
 
-EXPOSE 3005
+EXPOSE 3003
 RUN npm run build
 CMD ["node", "dist/index.js"]
 
