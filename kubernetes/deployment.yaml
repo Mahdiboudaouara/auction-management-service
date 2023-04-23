@@ -37,7 +37,7 @@ spec:
         - name: DB_PORT
           value: "3306"
         - name: AUCTION_PORT
-          value: "3006"
+          value: "3002"
         - name: AUCTION_SERVER
           value: "139-144-162-115.ip.linodeusercontent.com"
         - name: CLIENT_PORT
