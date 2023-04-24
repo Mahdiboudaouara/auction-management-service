@@ -86,7 +86,7 @@ pipeline {
                             sh "ssh -o StrictHostKeyChecking=no ${SERVER_USERNAME}@${SERVER_ADDRESS} ${shellCmd}"
                         }
                     } else {
-                        build job: "helm-auction/main", propagate: true, wait: true , parameters: [[$class: 'StringParameterValue', name: 'IMAGE_TAG', value: ${IMAGE_TAG}]]
+                        build job: "helm-auction/main", propagate: true, wait: true , parameters: [[$class: 'StringParameterValue', name: 'IMAGE_TAG', value: "${IMAGE_TAG}"]]
                         // withKubeConfig([credentialsId: 'clusterkubeconfig', serverUrl: 'https://c81ac799-c9ef-4da4-9d8a-872d8e6400c8.eu-central-2.linodelke.net']) {
                         //     sh 'envsubst < kubernetes/deployment.yaml | kubectl apply -f -'
                         //     sh 'envsubst < kubernetes/service.yaml | kubectl apply -f -'
