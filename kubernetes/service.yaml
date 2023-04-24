@@ -15,5 +15,9 @@ spec:
       port : 3003
       #to wich pod it should forward the 
       targetPort: 3003
+    - protocol: TCP
+      port : 80
+      #to wich pod it should forward the 
+      targetPort: 80
   type: ClusterIP
 
