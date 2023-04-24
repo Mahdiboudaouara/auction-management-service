@@ -11,9 +11,12 @@ spec:
     app: $PROJECT_NAME
   ##accepts external requests by assinging the service an external ip adress
   ports:
-    - protocol: TCP
-      port : 3003
-      #to wich pod it should forward the 
+    - name: http
+      protocol: TCP
+      port: 3003
       targetPort: 3003
-  type: ClusterIP
+    - name: http
+      protocol: TCP
+      port: 3003
+      targetPort: 80
 
