@@ -25,6 +25,7 @@ spec:
         imagePullPolicy: Always
         ports:  
         - containerPort: 3003
+        - containerPort: 80
         env:
         - name: DB_HOST
           value: mysql-primary
