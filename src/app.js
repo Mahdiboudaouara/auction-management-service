@@ -11,6 +11,11 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({
     extended: true
 }))
+const path = require("path");
+
+app.use(express.json())
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 
 //import routes
