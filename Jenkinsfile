@@ -18,7 +18,7 @@ pipeline {
         DB_PASSWORD = 'letmein'
         DB_DATABASE = 'auctiondb'
         DOCKER_IMAGE_NAME = 'mahdiboudaouara/auction-management-service'
-        PROJECT_NAME = 'auction-management-service'
+        PROJECT_NAME = 'auctionservice'
         REPO_SERVER = '739761511001.dkr.ecr.eu-central-1.amazonaws.com'
         ECR_REGISTRY = '739761511001.dkr.ecr.eu-central-1.amazonaws.com/ecr-mahdi'
         APP_URL = '139-144-162-115.ip.linodeusercontent.com'
